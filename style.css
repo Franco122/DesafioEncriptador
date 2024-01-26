@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--Light-blue-light-blue-100, #F3F5FC);
+}
+
+main{
+    display: flex;
+    justify-content: space-between;
+    width: 1440px;
+    height: 1024px;
+}
+
+.contenedor-izquierda{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 240px;
+    top: 100px;
+}
+
+.entradaTexto textarea{
+    width: 333px;
+    height: 300px;
+    border: none;
+    font-size: 32px;
+    line-height: 48px;
+    resize: none;
+    background: var(--Light-blue-light-blue-100, #F3F5FC);
+    color: #0A3871;
+    margin-bottom: 120px;
+}
+
+.entradaTexto textarea::placeholder{
+    color: #0A3871;
+}
+
+.btnEncriptador{
+    width: 328px;
+    height: 67px;
+    border-radius: 24px;
+    padding: 24px;
+    gap: 8px;
+    background-color: #0A3871;
+    border: none;
+    color: #ffffff;
+}
+
+.btnDesencriptador{
+    width: 328px;
+    height: 67px;
+    border-radius: 24px;
+    border: 1px solid #0A3871;
+    padding: 24px;
+    gap: 8px;
+    color: #0A3871;
+}
+
+.btn-copiar {
+    width: 328px;
+    height: 67px;
+    border-radius: 24px;
+    color: var(--Dark-blue-dark-blue-300, #0A3871);
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 100px;
+}
+
+.contenedor-derecha{
+    width: 400px;
+    height: 944px;
+    flex-shrink: 0;
+    border-radius: 32px;
+    background: var(--White, #FFF);
+    /* shadow */
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    padding-top: 100px;
+    
+}
+
+.logo{
+    width: 120px;
+    height: 48px;
+    flex-shrink: 0;
+    position: relative;
+    top: 30px;
+}
+
+.texto1{
+    color: var(--Gray-gray-500, #343A40);
+    text-align: center;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; 
+}
+
+.texto2{
+    color: var(--Gray-gray-400, #495057);
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; 
+}
+
+.texto-encriptado{
+     font-family: 'Inter', sans-serif;
+     font-weight: 400;
+     font-size: 24px;
+     color: #495057;
+     word-wrap: break-word;
+}
+
+@media screen and (max-width:  768px) {
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .munieco{
+        display: none;
+    }
+
+    .contenedor-derecha{
+        display: flex;
+        width: 60%;
+        padding: 32px;
+        flex-direction: column;
+        gap: 32px;
+        margin-left: 120px;
+        height: 30%;
+        margin-top: 130px;
+    }
+
+    .btn-copiar{
+        margin-top: 0;
+    }
+
+    .contenedor-copiar{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .entradaTexto textarea{
+        color: var(--Dark-blue-dark-blue-300, #0A3871);
+        font-family: Inter;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; 
+    }
+
+    .contenedor-izquierda{
+        left: 30px;
+    }
+
+    .botones{
+        margin-left: 30px;
+    }
+
+    .botones button{
+        display: block;
+        width: 40%;
+    }
+
+    .contenedor-derecha{
+        margin-left: 0;
+        width: 50%;
+    }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>DesafioEncriptador</title>
+</head>
+<body>
+    <header>
+        <h2><img src="imagenes/Logo.svg" alt="logoAlura" class="logo"></h2>
+    </header>
+    <main>
+        <div class="contenedor-izquierda">
+            <div class="entradaTexto">
+                <textarea placeholder="Ingrese el texto aquí" class="contenidoTexto" oninput="validarEntrada(this)"></textarea>
+            </div>
+            <div id="mensajeError" class="alerta" style="display: none;">
+                <img src="imagenes/alerta.svg" alt="alerta">
+                <span>Solo letras minúsculas y sin acentos</span>
+            </div>
+            <div class="botones">
+                <button class="btnEncriptador" onclick="encriptador()">Encriptar</button>
+                <button class="btnDesencriptador" onclick="desencriptador()">Desencriptar</button>
+            </div>
+        </div>
+        <div class="contenedor-derecha">
+            <div class="contenedor-derecha__info">
+                <div class="munieco">
+                    <img src="imagenes/Muñeco.svg" alt="muniecoConUnaLupa">
+                </div>
+                <div class="contenedor-derecha__texto">
+                    <span class="texto1">Ningún mensaje fue encontrado</span>
+                    <p class="texto2">Ingresa el texto que desees encriptar o <br> desencriptar.</p>
+                </div>
+            </div>
+            <div class="contenedor-copiar">
+                <input type="button" id="btnCopiar" class="btn-copiar" value="Copiar" style="display: none;">
+            </div>
+        </div>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
